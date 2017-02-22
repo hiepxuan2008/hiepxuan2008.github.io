@@ -25,18 +25,21 @@
 	document.getElementsByTagName("head")[0].appendChild(s);
 	})();</script>
 	<script type="text/javascript" src="js/snowstorm.js"></script>
+	
+	<link rel="stylesheet" type="text/css" href="css/animate.css" />
+	<script src="js/jquery.min.js"></script>
 </head>
 
 <body>
 	
 	<!-- SPEAKERS SECTION -->	
 	<section id="speakers">
-		<img src="img/logo.png" style="width:100px; height: 100px; border: none; margin-bottom: 20px" alt="Logo Group 3 14CNTN WebDev HCMUS" />
+		<img id="logo" class="animated bounce" src="img/logo.png" style="width:100px; height: 100px; border: none; margin-bottom: 20px" alt="Logo Group 3 14CNTN WebDev HCMUS" />
 		<div class="separator"></div>
 		<div class="container">
 			<div class="col-md-8 col-md-offset-2">
 				<!-- Section Description -->
-				<p>What You Think, You Become!</p>
+				<p class="animated wobble" id="slogan">What You Think, You Become!</p>
 			</div>
 			
 			<!-- First Row of Speakers -->
@@ -110,10 +113,27 @@
 	<!-- //SPEAKERS SECTION -->
 	
 	<div style="position: fixed; width: 100%; height: 18px; z-index: 0; left: 0pt; bottom: 0pt; border-top: 1px solid #000000; padding: 2px 5px; background:#FFFFFF url('http://i25.servimg.com/u/f25/16/25/04/88/bg_bot10.gif'); font-family: tahoma; font-size: 10pt; font-weight: bold;" align="center"> 
-	<span class="bottom_text"><font color=#cc0066><marquee SCROLLDELAY=100>Cảm ơn quý thầy cô, anh chị và các bạn đã ghé thăm website giới thiệu của Nhóm 3 - WebDev 14CNTN, chúc mọi người có một ngày làm việc tràn đầy năng lượng và hạnh phúc!!!</marquee></font></span>
-
-</div>
-
-	</span>
+	<span class="bottom_text"><font color=#cc0066><marquee SCROLLDELAY=100>Cảm ơn quý thầy cô, anh chị và các bạn đã ghé thăm website giới thiệu của Nhóm 3 - WebDev 14CNTN, chúc mọi người có một ngày làm việc tràn đầy năng lượng và hạnh phúc!!!</marquee></font></span></div>
+	
+	<script>
+		$.fn.extend({
+		animateCss: function (animationName) {
+			var animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
+			this.addClass('animated ' + animationName).one(animationEnd, function() {
+				$(this).removeClass('animated ' + animationName);
+			});
+		}
+	});
+	</script>
+	
+	<!-- // Animation Hover Logo & Slogan! -->
+	<script>
+		$( "#logo" ).mouseover(function() {
+		  $( "#logo" ).animateCss('bounce');
+		});
+		$( "#slogan" ).mouseover(function() {
+		  $( "#slogan" ).animateCss('wobble');
+		});
+	</script>
 </body>
 </html>	
