@@ -15,6 +15,8 @@ p {line-height: 160%;}
 a {text-decoration: none; color: #fff; transition: all 0.1s ease-in;}
 img {border: 0;}
 
+/* Start http://www.cursors-4u.com */ body, a:hover {cursor: url(../cursor/nat322.ani), url(../cursor/nat322.png), progress !important;} /* End http://www.cursors-4u.com */
+
 body {
 	background: #4593e3;;
 	color: #fff;
