@@ -1,24 +1,14 @@
-/*
-Tutorial Name: Meet the Team
-Description: A simple concept for members section.
-Author: Stanislav Kostadinov
-Author URI: http://stanislav.it
-Usage: You can use this code for free in personal and commercial projects if you build upon it. You are not allowed to republish, redistribute or sell "as-is". 
-*/
-
 /* 01. GENERAL SETTINGS ============================================ */
 
 * {margin: 0; padding: 0;}
-
 p {line-height: 160%;}
-
 a {text-decoration: none; color: #fff; transition: all 0.1s ease-in;}
 img {border: 0;}
 
-/* Start http://www.cursors-4u.com */ body, a:hover {cursor: url(../cursor/nat322.ani), url(../cursor/nat322.png), progress !important;} /* End http://www.cursors-4u.com */
+body, a:hover {cursor: url(../cursor/nat322.ani), url(../cursor/nat322.png), progress !important;} /* End http://www.cursors-4u.com */
 
 body {
-	background: #4593e3;;
+	background: #4593e3;
 	color: #fff;
 	font-family: 'PT Sans Narrow', sans-serif;
 	font-size: 13px;
@@ -26,24 +16,6 @@ body {
 }
 
 .clear {clear: both;}
-
-/* Buttons */
-.btn {
-	display: inline-block;
-	margin-top: 20px;
-	padding: 10px 40px;
-	color: rgba(255,255,255, 0.95);
-	font-size: 18px;
-	font-weight: 700;
-	text-transform: uppercase;
-	border: none;
-	border-radius: 20px;
-	outline: 0;
-	transition: all 0.1s ease-in;
-}
-
-.btn-transparent {background: rgba(0,0,0, 0.2);}
-.btn-transparent:hover {background: rgba(0,0,0, 0.4);}
 
 /* Separators */
 .separator {
@@ -53,25 +25,19 @@ body {
 	height: 5px;
 }
 
-/* 02. FONT FACE ============================================ */
-
-@font-face {
-    font-family: 'norwester';
-	src: url('../fonts/norwester/norwester.eot');
-    src: url('../fonts/norwester/norwester.eot?iefix') format('embedded-opentype'),
-		 url('../fonts/norwester/norwester.ttf');
-    font-weight: normal;
-}
-
-/* 03. SPEAKERS SETTINGS ============================================ */
-
-#speakers {
+#container {
 	padding: 30px 0;
-	background: #4593e3;
 	text-align: center;	
 }
 
-#speakers p {
+#container #logo {
+	width:100px;
+	height: 100px;
+	border: none;
+	margin-bottom: 20px
+}
+
+#container p {
 	padding: 20px 0 40px;
 	color: rgba(255,255,255, 0.85);
 	font-family: 'Open Sans', sans-serif;
@@ -79,20 +45,13 @@ body {
 	letter-spacing: 0.2px;
 }
 
-#speakers h3 {
-	padding: 0 0 15px;
-	font-family: 'norwester';
-	font-size: 36px;
-	text-transform: uppercase;
-}
-
-#speakers h4  {
+#container h4  {
 	margin-top: -20px;
 	font-size: 32px;
 	font-weight: 700;
 }
 
-#speakers h4 span {
+#container h4 span {
 	display: block;
 	position: relative;
 	left: -40px;
@@ -102,7 +61,7 @@ body {
 	padding: 0;
 }
 
-#speakers img {
+#container img {
 	width: 100%;
 	max-width: 240px;
 	border-radius: 50%; 
@@ -111,14 +70,14 @@ body {
 	transition: all 0.1s ease-in;
 }
 	
-#speakers img:hover {
+#container img:hover {
 	border: 15px solid #3980C9;
 	position: relative;
 	z-index: 10;
 	transition: all 0.1s ease-in;	
 }
 
-#speakers span {
+#container span {
 	padding: 8px 20px;
 	position: relative;
 	top: -64px;
@@ -129,7 +88,7 @@ body {
 	font-size: 16px;
 }
 
-#speakers div .speaker-code {
+#container div .speaker-code {
 	margin-bottom: 10px;
 	font-size: 18px;
 	width: auto;
@@ -149,9 +108,9 @@ body {
 }
 
 /* Social Networks Meta */
-#speakers li {display: inline-block; padding: 0 6px; font-size: 18px;}
-#speakers li a {color: rgba(0,0,0, 0.3); transition: all 0.1s ease-in;}
-#speakers li a:hover {color: rgba(0,0,0, 0.7);}
+#container li {display: inline-block; padding: 0 6px; font-size: 18px;}
+#container li a {color: rgba(0,0,0, 0.3); transition: all 0.1s ease-in;}
+#container li a:hover {color: rgba(0,0,0, 0.7);}
 
 /* Rows Optimization */
 .row2 {
@@ -164,12 +123,10 @@ body {
 
 /* Mobile Devices Optimization */
 @media (min-width: 568px) and (max-width: 992px) {
-
 	.row1 .col-md-3, .row2 .col-md-3 {
 		display: inline-block;
 		max-width: 50%;
 	}
 
-	#speakers img {max-width: 300px;}
-
+	#container img {max-width: 300px;}
 }
