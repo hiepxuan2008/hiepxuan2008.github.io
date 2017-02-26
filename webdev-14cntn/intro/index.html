@@ -47,7 +47,7 @@
 			
 				<!-- Speaker 1 -->
 				<div class="col-md-4">
-					<a href="#" class="member-profile">
+					<a href="#1" class="member-profile">
 						<div class="unhover_img">
 						<img src="img/hiepmt.jpg" alt="" />
 						</div>
@@ -55,8 +55,8 @@
 						<img src="img/hiepmt-hover.jpg" alt="" />
 						</div>
 						<span>Leader</span>
-						<h4>MAI THANH HIEP</h4>
-						<div id="student_code">1312206</div>
+						<h4 class="speaker-name">MAI THANH HIEP</h4>
+						<div class="speaker-code">1312206</div>
 					</a>	
 					<ul>
 						<li><a href="https://www.facebook.com/hiepit" target="_blank"><i class="fa fa-facebook"></i></a></li>
@@ -67,7 +67,7 @@
 				
 				<!-- Speaker 2 -->
 				<div class="col-md-4">
-					<a href="#" class="member-profile">
+					<a href="#2" class="member-profile">
 						<div class="unhover_img">
 						<img src="img/hieunt.jpg" alt="" />
 						</div>
@@ -75,8 +75,8 @@
 						<img src="img/hieunt-hover.jpg" alt="" />
 						</div>
 						<span>Member</span>
-						<h4>NGUYEN TRUNG HIEU</h4>
-						<div id="student_code">1412165</div>
+						<h4 class="speaker-name">NGUYEN TRUNG HIEU</h4>
+						<div class="speaker-code">1412165</div>
 					</a>	
 					<ul>
 						<li><a href="https://www.facebook.com/nguyenhieu9596" target="_blank"><i class="fa fa-facebook"></i></a></li>
@@ -87,7 +87,7 @@
 				
 				<!-- Speaker 3 -->
 				<div class="col-md-4">
-					<a href="#" class="member-profile">
+					<a href="#3" class="member-profile">
 						<div class="unhover_img">
 						<img src="img/chuonghm.jpg" alt="" />
 						</div>
@@ -95,8 +95,8 @@
 						<img src="img/chuonghm-hover.jpg" alt="" />
 						</div>
 						<span>Member</span>
-						<h4>HUYNH MINH CHUONG</h4>
-						<div id="student_code">1412060</div>
+						<h4 class="speaker-name">HUYNH MINH CHUONG</h4>
+						<div class="speaker-code">1412060</div>
 					</a>					
 					<ul>
 						<li><a href="https://www.facebook.com/hmchuong" target="_blank"><i class="fa fa-facebook"></i></a></li>
@@ -130,12 +130,24 @@
 	<script>
 		$( "#logo" ).animateCss('bounce');
 		$( "#slogan" ).animateCss('wobble');
+		
+		$( ".hover_img" ).mouseover(function() {
+		  $(this).animateCss('tada');
+		});
+		
+		$( ".speaker-name" ).mouseover(function() {
+		  $(this).animateCss('rubberBand');
+		});
+		
+		$( ".speaker-code" ).mouseover(function() {
+		  $(this).animateCss('flipInY');
+		});
 	
 		$( "#logo" ).mouseover(function() {
-		  $( "#logo" ).animateCss('bounce');
+		  $(this).animateCss('bounce');
 		});
 		$( "#slogan" ).mouseover(function() {
-		  $( "#slogan" ).animateCss('wobble');
+		  $(this).animateCss('wobble');
 		});
 	</script>
 </body>

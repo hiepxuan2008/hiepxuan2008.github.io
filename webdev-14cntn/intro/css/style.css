@@ -129,9 +129,10 @@ body {
 	font-size: 16px;
 }
 
-#speakers div #student_code {
+#speakers div .speaker-code {
 	margin-bottom: 10px;
 	font-size: 18px;
+	width: auto;
 }
 
 /* Member Image Hover Effect */
