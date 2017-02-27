@@ -18,6 +18,10 @@
     <script type="text/javascript" src="js/snowstorm.js"></script> <!-- Snow Storm Effect /-->
     <link rel="stylesheet" type="text/css" href="css/animate.css" /> <!-- CSS3 Animation Effects /-->
 	<script type="text/javascript" src="js/cursor.js"></script> <!-- Animated Cursor script work on Chrome, Firefox, IE... /-->
+
+    <link rel="stylesheet" type="text/css" href="tooltipster/css/tooltipster.bundle.min.css" />
+    <script type="text/javascript" src="tooltipster/js/tooltipster.bundle.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="tooltipster/css/plugins/tooltipster/sideTip/themes/tooltipster-sideTip-borderless.min.css" />
 </head>
 
 <body>
@@ -37,8 +41,14 @@
                         <div class="unhover_img">
                             <img src="img/hiepmt.jpg" alt="" />
                         </div>
-                        <div class="hover_img">
+                        <div class="hover_img tooltip" data-tooltip-content="#status-1">
                             <img src="img/hiepmt-hover.jpg" alt="" />
+                        </div>
+                        <div style="display: none;">
+                            <span id="status-1">
+                                <strong style="color:black">Sky ơi! Say oh yeah!</strong>
+                                <span style="cursor: pointer; color: rgb(255, 0, 102);">꧁༺♥๖ۣۜYêµ <img src="http://dv.diepkhuc.com/smileys/anime/938.gif"> ๖ۣۜHá†♥༻꧂</span>
+                            </span>
                         </div>
                         <span>Leader</span>
                         <h4 class="speaker-name">MAI THANH HIEP</h4>
@@ -57,8 +67,13 @@
                         <div class="unhover_img">
                             <img src="img/hieunt.jpg" alt="" />
                         </div>
-                        <div class="hover_img">
+                        <div class="hover_img tooltip" data-tooltip-content="#status-2">
                             <img src="img/hieunt-hover.jpg" alt="" />
+                        </div>
+                        <div style="display: none;">
+                            <span id="status-2">
+                                <strong style="color:black">Be the change that you wish to see in the world.</strong>
+                            </span>
                         </div>
                         <span>Member</span>
                         <h4 class="speaker-name">NGUYEN TRUNG HIEU</h4>
@@ -77,8 +92,13 @@
                         <div class="unhover_img">
                             <img src="img/chuonghm.jpg" alt="" />
                         </div>
-                        <div class="hover_img">
+                        <div class="hover_img tooltip" data-tooltip-content="#status-3">
                             <img src="img/chuonghm-hover.jpg" alt="" />
+                        </div>
+                        <div style="display: none;">
+                            <span id="status-3">
+                            	<strong style="color:black">Chương thích là Chương làm thôi!💖</strong>
+                            </span>
                         </div>
                         <span>Member</span>
                         <h4 class="speaker-name">HUYNH MINH CHUONG</h4>
@@ -135,6 +155,15 @@
         $("#slogan").mouseover(function() {
             $(this).animateCss('wobble');
         });
+    </script>
+    <script>
+        $(document).ready(function() {
+            $('.tooltip').tooltipster({
+                theme: 'tooltipster-borderless'
+            });
+            //$('.tooltip').tooltipster('content', 'My new content');
+        });
+
     </script>
 	
 	<!-- // Online Users Counter -->
