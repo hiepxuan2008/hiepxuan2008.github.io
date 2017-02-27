@@ -3,7 +3,7 @@ var offsetfrommouse = [0, 0] //image x,y offsets from cursor position in pixels.
 var displayduration = 0 //duration in seconds image should remain visible. 0 for always.
 
 if (document.getElementById || document.all)
-    document.write('<div id="trailimageid" style="position:absolute;z-index:999;visibility:visible;left:0px;top:0px;width:1px;height:1px"><img src="' + trailimage[0] + '" border="0" width="' + trailimage[1] + 'px" height="' + trailimage[2] + 'px"></div>')
+    document.write('<div id="trailimageid" style="position:absolute;z-index:-1;visibility:visible;left:0px;top:0px;width:0px;height:0px"><img src="' + trailimage[0] + '" border="0" width="' + trailimage[1] + 'px" height="' + trailimage[2] + 'px"></div>')
 
 function gettrailobj() {
     if (document.getElementById)
