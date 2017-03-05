@@ -25,7 +25,8 @@ body, a:hover {cursor: url(../cursor/nat322.ani), url(../cursor/nat322.png), pro
  */
 
 body {
-    background: #4593e3;
+    /*background: #4593e3;*/
+	background: url("../img/universe.jpg") no-repeat center / cover;
     color: #fff;
     font-family: 'PT Sans Narrow', sans-serif;
     font-size: 13px;
