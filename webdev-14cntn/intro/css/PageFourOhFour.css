@@ -1,0 +1,93 @@
+@-webkit-keyframes bounceinfinity {
+    0%, 100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0)
+    }
+    50% {
+        -webkit-transform: translateY(-30px);
+        transform: translateY(-30px)
+    }
+}
+@keyframes bounceinfinity {
+    0%, 100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0)
+    }
+    50% {
+        -webkit-transform: translateY(-30px);
+        transform: translateY(-30px)
+    }
+}
+@-webkit-keyframes flapWingLeft {
+    0%, 100%, 50% {
+        -webkit-transform: rotate(0);
+        transform: rotate(0)
+    }
+    25%,
+    75% {
+        -webkit-transform: rotate(-75deg);
+        transform: rotate(-75deg)
+    }
+}
+@keyframes flapWingLeft {
+    0%, 100%, 50% {
+        -webkit-transform: rotate(0);
+        transform: rotate(0)
+    }
+    25%,
+    75% {
+        -webkit-transform: rotate(-75deg);
+        transform: rotate(-75deg)
+    }
+}
+@-webkit-keyframes flapWingRight {
+    0%, 100%, 50% {
+        -webkit-transform: rotate(0);
+        transform: rotate(0)
+    }
+    25%,
+    75% {
+        -webkit-transform: rotate(75deg);
+        transform: rotate(75deg)
+    }
+}
+@keyframes flapWingRight {
+    0%, 100%, 50% {
+        -webkit-transform: rotate(0);
+        transform: rotate(0)
+    }
+    25%,
+    75% {
+        -webkit-transform: rotate(75deg);
+        transform: rotate(75deg)
+    }
+}
+.FourOhFour-unicorn {
+    position: relative;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 240px;
+    margin: 0 auto;
+    -webkit-animation: bounceinfinity 5s infinite;
+    animation: bounceinfinity 5s infinite
+}
+.FourOhFour-unicorn-leftWing {
+    -webkit-animation: flapWingLeft 2.5s infinite;
+    animation: flapWingLeft 2.5s infinite;
+    -webkit-transform-origin: bottom right;
+    transform-origin: bottom right
+}
+.FourOhFour-unicorn-rightWing {
+    -webkit-animation: flapWingRight 2.5s infinite;
+    animation: flapWingRight 2.5s infinite;
+    -webkit-transform-origin: bottom left;
+    transform-origin: bottom left
+}
+.FourOhFour-unicorn-leftWing,
+.FourOhFour-unicorn-rightWing {
+    -moz-animation: none
+}
+/*# sourceMappingURL=PageFourOhFour-f71b2606.css.map*/
