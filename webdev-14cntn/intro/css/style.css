@@ -22,10 +22,9 @@ body, a:hover {
     cursor: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAZdEVYdFNvZnR3YXJlAFBhaW50Lk5FVCB2My41LjbQg61aAAAADUlEQVQYV2P4//8/IwAI/QL/+TZZdwAAAABJRU5ErkJggg=='), url(images/blank.cur), none !important;
 }*/
 
-body, a:hover {cursor: url(../cursor/nat322.ani), url(../cursor/nat322.png), progress !important;}
+/* body, a:hover {cursor: url(../cursor/nat322.ani), url(../cursor/nat322.png), progress !important;} */
 
 body {
-    /*background: #4593e3;*/
 	background: url("../img/universe.jpg") no-repeat center / cover;
     color: #fff;
     font-family: 'PT Sans Narrow', sans-serif;
@@ -132,11 +131,11 @@ body {
     font-size: 18px;
 }
 #container li a {
-    color: rgba(0, 0, 0, 0.3);
+    color: rgba(0, 0, 0, 0.5);
     transition: all 0.1s ease-in;
 }
 #container li a:hover {
-    color: rgba(0, 0, 0, 0.7);
+    color: rgba(0, 0, 0, 0.8);
 }
 /* Rows Optimization */
 
