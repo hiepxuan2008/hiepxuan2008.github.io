@@ -25,7 +25,7 @@ body, a:hover {
 /* body, a:hover {cursor: url(../cursor/nat322.ani), url(../cursor/nat322.png), progress !important;} */
 
 body {
-	background: url("../img/universe.jpg") no-repeat center / cover;
+	background-color: #004672;
     color: #fff;
     font-family: 'PT Sans Narrow', sans-serif;
     font-size: 13px;
@@ -51,7 +51,7 @@ body {
     font-size: 180px;
     font-size: 11.25rem;
     display: block;
-    opacity: .3;
+    opacity: 0.5;
     margin: auto;
     padding: 20px 0;
     line-height: 1;
@@ -60,6 +60,7 @@ body {
 }
 
 #container {
+	background: url("../img/universe.jpg") no-repeat center / cover;
     text-align: center;
 }
 #container p {
@@ -112,8 +113,8 @@ body {
     font-size: 18px;
     width: auto;
 }
-/* Member Image Hover Effect */
 
+/* Member Image Hover Effect */
 .hover_img {
     display: none
 }
@@ -123,8 +124,8 @@ body {
 .member-profile:hover .hover_img {
     display: block;
 }
-/* Social Networks Meta */
 
+/* Social Networks Meta */
 #container li {
     display: inline-block;
     padding: 0 6px;
