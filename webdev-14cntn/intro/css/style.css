@@ -25,7 +25,7 @@ body, a:hover {
 /* body, a:hover {cursor: url(../cursor/nat322.ani), url(../cursor/nat322.png), progress !important;} */
 
 body {
-	background-color: #004672;
+	background: #004672 url("../img/universe.jpg") no-repeat center / cover;;
     color: #fff;
     font-family: 'PT Sans Narrow', sans-serif;
     font-size: 13px;
@@ -60,7 +60,6 @@ body {
 }
 
 #container {
-	background: url("../img/universe.jpg") no-repeat center / cover;
     text-align: center;
 }
 #container p {
