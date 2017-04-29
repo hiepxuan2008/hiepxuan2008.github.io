@@ -6,9 +6,6 @@ $(document).ready(function() {
        $(this).stop().animate({width: '60%'}, 350);
    });
 
-   // Load footer
-   $(".add-footer").load("./footer.html");
-
    // Responsive Category & Location
    ToggleLeftSide();
    $(window).bind('resize', ToggleLeftSide);

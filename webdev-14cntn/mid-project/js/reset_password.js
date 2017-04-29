@@ -1,7 +1,5 @@
 // Start refresh password
 $(document).ready(function() {
-  // Load footer
-  $(".add-footer").load("./footer.html");
   $("#reset-newPassword").password({
     animate: false
   });

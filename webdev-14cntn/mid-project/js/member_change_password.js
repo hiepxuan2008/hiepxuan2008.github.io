@@ -1,7 +1,5 @@
 // Start JS for member change password
 $(document).ready(function() {
-  // Load footer
-  $(".add-footer").load("./footer.html");
   $("#old-password").addClass("has-feedback");
   $(".icon-noti-old").addClass("glyphicon form-control-feedback");
   $("#new-password").addClass("has-feedback");
