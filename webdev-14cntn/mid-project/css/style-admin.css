@@ -1,0 +1,365 @@
+
+
+.topbar {
+	background: #2A3F54;
+	border-color: #2A3F54;
+	border-radius: 0px;
+}
+
+.topbar .navbar-header a {
+	color: #ffffff;
+}
+
+.wrapper {
+    padding-left: 0px;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+.sidebar {
+    z-index: 1000;
+    position: fixed;
+    top: 50px;
+    left: -50px;
+    width: 50px;
+    height: 100%;
+    overflow-y: auto;
+    background: #2A3F54;
+	color: #ffffff;
+	-webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+.main {
+	width: 100%;
+    position: relative;
+    padding-bottom:20px;
+}
+
+.wrapper.toggled {
+	padding-left: 50px;
+}
+
+.wrapper.toggled .sidebar {
+	left: 0;
+}
+
+/* Sidebar Styles */
+
+.sidebar-nav {
+    position: absolute;
+    top: 52px;
+    width: 50px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.sidebar-nav li {
+    line-height: 40px;
+}
+.sidebar-nav li a {
+    display: block;
+    text-decoration: none;
+    color: #e8e8e8;
+    padding: 0;
+    text-align:center;
+}
+
+.sidebar-nav li a:hover, .sidebar-nav li.active a {
+    text-decoration: none;
+    color: #fff;
+    background: #fff;
+    background: rgba(255,255,255,0.2);
+}
+
+.sidebar-nav li a:active,
+.sidebar-nav li a:focus {
+    text-decoration: none;
+}
+
+.sidebar-nav li span, .subbar li span {
+	display : none;
+}
+
+nav.subbar {
+	position: relative;
+	width: 100%;
+	border-radius: 0px;
+	background: #fff;
+	margin: 50px 0 -50px 0;
+	padding: 10px 0 0 0;
+	z-index: 2;
+}
+nav.subbar > ul.nav.nav-tabs {
+	padding: 0 5px;
+}
+
+nav.subbar > ul.nav.nav-tabs > li.active > a {
+    background: #dedede;
+    border-top: 1px solid #a6a6a6;
+    border-left: 1px solid #a6a6a6;
+    border-right: 1px solid #a6a6a6;
+    border-radius: 0px;
+}
+
+.admin-content {
+    padding: 0 30px;
+}
+
+.fade .row{
+    display: none;
+}
+
+.fade.in .row{
+    display: inline;
+}
+
+@media(min-width:768px){
+	.subbar li span {
+		display: inline;
+	}
+}
+
+@media(min-width:992px) {
+    .wrapper {
+    	padding-left: 50px;
+    }
+
+    .sidebar {
+    	left: 0;
+    	width: 50px;
+	}
+
+	.wrapper.toggled {
+		padding-left: 200px;
+	}
+
+	.wrapper.toggled .sidebar, .wrapper.toggled .sidebar-nav {
+		width: 200px;
+	}
+
+	.wrapper.toggled .sidebar-nav li a {
+		text-align: left;
+		padding: 0 0 0 10px;
+	}
+
+	.wrapper.toggled .sidebar-nav li span {
+		display: inline;
+	}
+
+}
+
+.navbar-btn {
+    background: none;
+    border: none;
+    height: 35px;
+    min-width: 35px;
+    color: #fff;
+    padding-right: 10px
+}
+.navbar-text {
+  margin-top: 14px;
+  margin-bottom: 14px;
+}
+@media (min-width: 768px) {
+  .navbar-text {
+    float: left;
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+}
+
+#admin-nav{
+    line-height: 0;
+}
+
+#admin-logout li a:link, #admin-logout li a:visited{
+    color: #000;
+    font-weight: normal;
+}
+
+i.fa{
+    width: 20px;
+}
+
+svg{
+  width: 100% !important
+}
+
+/*
+ admin_member_management.html
+*/
+.btn-group .btn {
+    transition: background-color .3s ease;
+}
+
+.panel-table .panel-body {
+    padding: 0;
+}
+
+#member-table > thead > tr > th {
+    border-bottom: none;
+}
+
+.panel-footer, .panel-table .panel-body .table-bordered {
+    border-style: none;
+    margin: 0;
+}
+
+.panel-table .panel-body .table-bordered > thead > tr > th:first-of-type {
+    text-align: center;
+    width: 50px;
+}
+
+.panel-table .panel-body .table-bordered > thead > tr > th.col-tools {
+    text-align: center;
+    width: 120px;
+}
+
+.panel-table .panel-body .table-bordered > thead > tr > th:last-of-type,
+.panel-table .panel-body .table-bordered > tbody > tr > td:last-of-type {
+    border-right: 0;
+}
+
+.panel-table .panel-body .table-bordered > thead > tr > th:first-of-type,
+.panel-table .panel-body .table-bordered > tbody > tr > td:first-of-type {
+    border-left: 0;
+}
+
+.panel-table .panel-body .table-bordered > tbody > tr:first-of-type > td {
+    border-bottom: 0;
+}
+
+.panel-table .panel-body .table-bordered > thead > tr:first-of-type > th {
+    border-top: 0;
+}
+
+.member-table-box .pagination > li > a, .member-table-box .pagination > li > span {
+    border-radius: 50% !important;
+    margin: 0 5px;
+}
+
+.member-table-box .pagination {
+    margin: 0;
+}
+
+.member-table-box .panel-footer .pagination > li{
+    padding: 0;
+    border-bottom: 0;
+}
+
+#member-table span.glyphicon, #admin-revenue-credit-table span.glyphicon, .admin-management span.glyphicon{
+    padding-left: 0;
+}
+
+ /* Start admin_revenue_statistics.html*/
+.title-admin-revenue-statistics{
+  text-align: center;
+  font-weight: bold;
+  font-size: 30px;
+  margin: 0px 0 0px 0;
+  color: #FD8A33;
+}
+
+/*Reponsive*/
+@media (max-width: 342px) {
+  .title-admin-revenue-statistics{
+    font-size: 24px;
+  }
+  .box-table-history-revenue{
+    padding-left: 0px;
+    font-size: 11px;
+  }
+}
+ /* End admin_revenue_statistics.html*/
+
+ /*
+   admin_problem_management.html
+ */
+
+ .morris-hover {
+     position: absolute;
+     z-index: 1000
+ }
+ .morris-hover.morris-default-style {
+     border-radius: 10px;
+     padding: 6px;
+     color: #666;
+     background: rgba(255, 255, 255, 0.8);
+     border: solid 2px rgba(230, 230, 230, 0.8);
+     font-family: sans-serif;
+     font-size: 12px;
+     text-align: center
+ }
+ .morris-hover.morris-default-style .morris-hover-row-label {
+     font-weight: normal;
+     margin: 0.25em 0
+ }
+ .morris-hover.morris-default-style .morris-hover-point {
+     white-space: nowrap;
+     margin: 0.1em 0
+ }
+
+ .chart-title{
+     text-align: center;
+     font-weight: bold;
+     font-size: 20px;
+     margin: 20px;
+ }
+ /* for problems table*/
+ .table-title{
+     text-align: center;
+     font-weight: bold;
+     font-size: 24px;
+     margin: 20px 0 0px 0;
+     color: #FD8A33;
+ }
+
+ .results tr[visible='false'],
+ .no-result{
+   display:none;
+ }
+
+ .results tr[visible='true']{
+   display:table-row;
+ }
+
+ .counter{
+   padding:8px;
+   color:#ccc;
+ }
+
+ @media (max-width: 342px) {
+   .box-table-problems{
+     padding-left: 0px;
+     font-size: 11px;
+   }
+ }
+@media(max-width: 350px){
+    .box-table-history-revenue{
+        width: 130%;
+        margin-left: -30px;
+    }
+    .box-admin-revenue-statistics-chart{
+        width: 130%;
+        margin-left: -30px;
+    }
+    .title-admin-revenue-statistics{
+        margin-top: -80px;
+    }
+}
+
+.analyse-member{
+	font-size: 16px;
+	font-weight: bold;
+}
+.analyse-member-label{
+
+}
+.analyse-member-data{
+	color: #ff0000;
+}

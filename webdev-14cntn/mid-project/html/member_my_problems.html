@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+        <meta name="description" content="Hãy để các chuyên gia của chúng tôi giải đáp các thắc mắc của bạn nhanh chóng">
+        <meta name="author" content="thacmac.vn">
+        <link rel="icon" href="../img/problem.png">
+
+        <title>ThacMac.Vn | Các thắc mắc của tôi</title>
+
+				<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+				<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="../css/style.css">
+		<link rel="stylesheet" type="text/css" href="../css/style-admin.css">
+	</head>
+	<body class="change-password">
+		<div class="header container-fluid">
+            <nav class="navbar header-wrapper navbar-default">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <div class="logo">
+                            <a href="member_problems_list.html">
+                                <img src="../img/logo.png" alt="thacmac.vn logo">
+                            </a>
+                        </div>
+                    </div>
+					<div class="dropdown account navbar-right col-xs-12 col-sm-3 col-md-2 col-lg-2">
+						<div class="avatar">
+							<img src="../img/hiepmt.jpg" alt="avatar">
+						</div>
+						<a class="username dropdown-toggle" data-toggle="dropdown" href="#">Mai Thành Hiệp <b class="caret"></b></a>
+						<a class="credit" href="#">300 Credit</a>
+						<ul class="dropdown-menu col-xs-12 col-sm-12 col-md-12">
+							<li><a href="member_my_profile.html">Hồ sơ</a></li>
+							<li><a href="member_buy_credit.html">Mua credit</a></li>
+							<li><a href="member_spending_statistics_credit.html">Thống kê giao dịch Credit</a></li>
+							<li><a href="member_change_password.html">Cài đặt</a></li>
+							<li><a href="#">Nhận hỗ trợ</a></li>
+							<li><a href="#">Mời bạn bè</a></li>
+							<li><a href="admin.html" style="border-bottom: #e5e5e5 solid 1px;border-top: #e5e5e5 solid 1px;">Admin - Quản lý trang</a></li>
+							<li><a href="guest_login.html"><i class="fa fa-fw fa-power-off text-danger" style="margin-right: 10px;"></i>Đăng xuất</a></li>
+						</ul>
+					</div>
+                    <div id="navbar" class="navbar-collapse collapse">
+                        <ul class="nav navbar-nav">
+                            <li><a href="member_problems_list.html">Các thắc mắc</a></li>
+                            <li><a href="member_specialist_list.html">Thuê chuyên gia</a></li>
+                            <li class="active"><a href="#">Thắc mắc của tôi</a></li>
+                            <li class="nav-post-problem"><a href="member_post_problem.html">Đăng thắc mắc</a></li>
+                        </ul>
+                    </div><!--/.nav-collapse -->
+
+                </div><!--/.container-fluid -->
+
+
+            </nav>
+		</div>
+    <div class="wrapper container-fluid">
+			<div class="box col-md-12 col-lg-12 col-sm-12 col-xs-12 box-table-member-history-spending-credit">
+				<div class="form-group pull-right">
+				    <input type="text" class="admin-search-problem form-control" placeholder="Tìm kiếm">
+				</div>
+				<span class="counter pull-right"></span>
+				<table class="table results" id="admin-problem-table">
+					<thead>
+						<tr>
+							<th>Tiêu đề thắc mắc</th>
+							<th>Ngày đăng</th>
+							<th>Ngân sách tối đa</th>
+							<th>Số báo giá</th>
+							<th>Tình trạng</th>
+							<th>Hành động</th>
+						</tr>
+						<tr class="warning no-result">
+							<td colspan="4"><i class="fa fa-warning"></i> No result</td>
+					    </tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td><a href="member_detail_my_problems.html">Debug giúp lỗi trong lập trình android</a></td>
+							<td>01/01/2017</td>
+							<td>200.000đ</td>
+							<td>5</td>
+							<td>Đã hoàn thành</td>
+							<td>
+								<a href="member_edit_problem.html" class="btn btn-warning" style="color: white">Sửa</a>
+								<a href="#" class="btn btn-danger" style="color: white">Xóa</a>
+							</td>
+						</tr>
+						<tr>
+							<td><a href="member_detail_my_problems.html">Tìm người hướng dẫn thực hiện website</a></td>
+							<td>01/01/2017</td>
+							<td>1.000.000đ</td>
+							<td>6</td>
+							<td>Đã hoàn thành</td>
+							<td>
+								<a href="member_edit_problem.html" class="btn btn-warning" style="color: white">Sửa</a>
+								<a href="#" class="btn btn-danger" style="color: white">Xóa</a>
+							</td>
+						</tr>
+						<tr>
+							<td><a href="member_detail_my_problems.html">Hướng dẫn làm đồ án Lập trình Mạng</a></td>
+							<td>15/02/2017</td>
+							<td>300.000đ</td>
+							<td>2</td>
+							<td>Hết hạn chào giá</td>
+							<td>
+								<a href="member_edit_problem.html" class="btn btn-warning" style="color: white">Sửa</a>
+								<a href="#" class="btn btn-danger" style="color: white">Xóa</a>
+							</td>
+						</tr>
+						<tr>
+							<td><a href="member_detail_my_problems.html">Tìm người dạy iOS nhanh chóng</a></td>
+							<td>01/03/2017</td>
+							<td>500.000đ</td>
+							<td>2</td>
+							<td>Đang nhận báo giá</td>
+							<td>
+								<a href="member_edit_problem.html" class="btn btn-warning" style="color: white">Sửa</a>
+								<a href="#" class="btn btn-danger" style="color: white">Xóa</a>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<div class="add-footer"></div>
+
+		<!-- Bootstrap core JavaScript
+        ================================================== -->
+        <!-- Placed at the end of the document so the pages load faster -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<script src="../js/script.js"></script>
+	</body>
+</html>
