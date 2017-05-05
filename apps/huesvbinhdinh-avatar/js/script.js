@@ -4,7 +4,7 @@ var context = canvas.getContext("2d");
 var deg = 0;
 
 var image = new Image();
-var strSourceBG = "./img/pattern/mau1.png";
+var strSourceBG = "./img/pattern/mau01.png";
 image.src = strSourceBG;
 image.onload = function() {
     context.drawImage(image, 0, 0, canvas.width, canvas.height);
@@ -14,7 +14,7 @@ $(function() {
     $('.image-editor').cropit({
         freeMove: true,
         smallImage: "allow",
-        maxZoom: 1.5
+        maxZoom: 3
     });
     $('#btn-choose-image').click(function() {
         $('.cropit-image-input').click();
@@ -64,9 +64,9 @@ function stateComboChange()
 
     switch(combo1.value)
     {
-        case 'mau1': strSourceBG = "./img/pattern/mau1.png";
+        case 'mau1': strSourceBG = "./img/pattern/mau01.png";
             break;
-        case 'mau2': strSourceBG = "./img/pattern/mau2.png";
+        case 'mau2': strSourceBG = "./img/pattern/mau02.png";
             break;
     }
     image.src = strSourceBG;
