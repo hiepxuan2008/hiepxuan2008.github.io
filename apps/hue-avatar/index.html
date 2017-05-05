@@ -1,315 +1,62 @@
-
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta content="Creat Avata HueUMPtv" name="description">
-
-    <meta property="og:image" content="logo.png">
-    <title>HueUMPtv Avata</title>
-    <link href="./avatar2_files/font-awesome.min.css" rel="stylesheet">
-    <link href="./avatar2_files/style.css" rel="stylesheet" type="text/css">
-
-    <link rel="stylesheet" href="css/style.css" />
-    <script charset="utf-8" type="text/javascript" src="js/modernizr.js"></script>
-
-    <script async="" src="./avatar2_files/analytics.js"></script><script src="./avatar2_files/jquery.v2.0.0.min.js"></script>
-    <script src="./avatar2_files/jquery.cropit.js"></script>
-
-    <script>
-        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-        ga('create', 'UA-55422847-5', 'auto');
-        ga('send', 'pageview');
-
-    </script>
+    <meta name="description" content="Tạo Avatar kỉ niệm các sinh viên Bình Định học tập tại Huế">
+    <meta property="og:image" content="./img/logo.png">
+    <title>HueSVBinhDinh Avatar</title>
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css" >
 </head>
 <body>
-<div class="bg active" style="background-image:url('img/bg1.jpg');"></div>
-
-</div>
-<div class="image-size-label" style="padding:0px; color:Red; text-align:center">
-    Tạo Avatar kỉ niệm 60 năm thành lập Đại học Y Dược Tp Huế
-</div>
-<div class="main-content">
-    <div class="image-editor">
-        <div class="column">
-            <div class="cropit-image-preview cropit-image-loaded" id="crop-image" style="background-image: url(./logo40nam.png.png); background-size: 650px 650px; background-position: 0px 0px; background-repeat: no-repeat;"></div>
-            <canvas id="leCanvas" width="650" height="650"></canvas>
-        </div>
-        <div class="column">
-            <div class="image-size-label">
-                Thay đổi kích thước
-            </div>
-            <input type="range" class="cropit-image-zoom-input" min="0" max="1" step="0.01">
-            <div class="image-size-label">
-                Xoay hình
-            </div>
-            <div id="controls">
-                <button id="rotate_left" type="button" title="Rotate left"> <i class="fa fa-rotate-left"></i> </button>
-                <button id="rotate_right" type="button" title="Rotate right"> <i class="fa fa-rotate-right"></i> </button>
-            </div>
-            <div class="image-size-label">
-
-            </div>
-            <div>
-                <select id="stateCombo" onchange="stateComboChange();">
-                    <option value="mau1">Mẫu 1</option>
-
-
-                </select>
-            </div>
-            <input type="file" class="cropit-image-input" accept="image/*">
-            <div class="select-image-btn">Chọn Ảnh</div>
-            <button class="export" onclick="downloadCV()">Tải Xuống</button>
-
-        </div>
-
+    <div class="">
+        <h2>Tạo Avatar kỉ niệm các sinh viên Bình Định học tập tại Huế</h2>
     </div>
-
-
-
-</div>
-
-</div>
-<div class="footer">
-    <span> Welcome! </span>
-</div>
-<script>
-    var canvas = document.getElementById("leCanvas");
-    var context = canvas.getContext("2d");
-    //context.globalCompositeOperation = "source-over";
-    var deg = 0;
-
-    var image = new Image();
-    var strSourceBG = "logo40nam.png.png";
-    image.src = strSourceBG;
-    image.onload = function() {
-        context.drawImage(image, 0, 0, canvas.width, canvas.height);
-    };
-    $(function() {
-        $('.image-editor').cropit({
-            imageState: {
-                src: 'tst.jpg'
-            }
-        });
-        $('.select-image-btn').click(function() {
-            $('.cropit-image-input').click();
-        });
-        $('#rotate_right').click(function(){
-            deg += 90;
-            if(deg >=360) deg = 0;
-            $('#crop-image').css('transform','rotate('+deg+'deg)');
-        });
-        $('#rotate_left').click(function(){
-            deg -= 90;
-            if(deg <= -360) deg = 0;
-            $('#crop-image').css('transform','rotate('+deg+'deg)');
-        });
-
-    });
-    function onExportClick () {
-        var img = new Image();
-        img.src = $('.image-editor').cropit('export');
-        img.onload = function(){
-            context.translate(canvas.width/2,canvas.height/2);
-            context.rotate(deg*Math.PI/180);
-            context.drawImage(img,-img.width/2,-img.width/2);
-            context.rotate(-deg*Math.PI/180);
-            context.translate(-canvas.width/2,-canvas.height/2);
-            var image = new Image();
-            image.src = "logo40nam.png.png";
-            image.onload = function() {
-                context.drawImage(image, 0, 0, canvas.width, canvas.height);
-                var imageData = canvas.toDataURL('image/png');
-
-                var html="<p>Right-click on image below and Save-Picture-As</p>";
-                html+="<img src='"+imageData+"' alt='from canvas'/>";
-                var tab=window.open();
-                tab.document.write(html);
-
-                context.clearRect(0, 0, canvas.width, canvas.height);
-                context.drawImage(image, 0, 0, canvas.width, canvas.height);
-            };
-        }
-    }
-    function downloadCV(t) {
-        var img = new Image();
-        img.src = $('.image-editor').cropit('export');
-        img.onload = function(){
-            context.translate(canvas.width/2,canvas.height/2);
-            context.rotate(deg*Math.PI/180);
-            context.drawImage(img,-img.width/2,-img.width/2);
-            context.rotate(-deg*Math.PI/180);
-            context.translate(-canvas.width/2,-canvas.height/2);
-            var image = new Image();
-            image.src = strSourceBG;
-            image.onload = function() {
-                context.drawImage(image, 0, 0, canvas.width, canvas.height);
-                var imageData = canvas.toDataURL('image/png');
-                imageData = imageData.replace(/^data:image\/[^;]*/, 'data:application/octet-stream');
-                imageData = imageData.replace(/^data:application\/octet-stream/, 'data:application/octet-stream;headers=Content-Disposition%3A%20attachment%3B%20filename=Canvas.png');
-                var link = document.createElement('a');
-                link.download = 'avatarHueUMPtv.png';
-                link.href = imageData;
-                link.click();
-                context.clearRect(0, 0, canvas.width, canvas.height);
-                context.drawImage(image, 0, 0, canvas.width, canvas.height);
-            };
-        }
-    };
-    function stateComboChange()
-    {
-        context.clearRect(0, 0, canvas.width, canvas.height);
-        var combo1 = document.getElementById('stateCombo');
-
-        switch(combo1.value)
-        {
-            case 'mau1': strSourceBG = "logo40nam.png.png";
-                break;
-            case 'mau2': strSourceBG = "mau2.png";
-                break;
-            case 'mau3': strSourceBG = "mau3.png";
-                break;
-            case 'mau4': strSourceBG = "mau4.png";
-                break;
-            case 'mau5': strSourceBG = "mau5.png";
-                break;
-
-        }
-        image.src = strSourceBG;
-        context.clearRect(0, 0, canvas.width, canvas.height);
-        context.drawImage(image, 0, 0, canvas.width, canvas.height);
-    }
-</script>
-<!--Chạy Quảng Cáo chỗ này nè-->
-<div id="divAdRight" style="DISPLAY: none; POSITION: absolute;padding-right:20px; TOP: 120px">
-
-</div>
-
-<div id="divAdLeft" style="DISPLAY: none; POSITION: absolute;padding-left:0px; TOP: 120px">
-
-</div>
-<script>
-
-    function FloatTopDiv()
-
-    {
-
-        startLX = ((document.body.clientWidth -MainContentW)/2)-LeftBannerW-LeftAdjust , startLY = TopAdjust+80;
-
-        startRX = ((document.body.clientWidth -MainContentW)/2)+MainContentW+RightAdjust , startRY = TopAdjust+80;
-
-        var d = document;
-
-        function ml(id)
-
-        {
-
-            var el=d.getElementById?d.getElementById(id):d.all?d.all[id]:d.layers[id];
-
-            el.sP=function(x,y){this.style.left=x + 'px';this.style.top=y + 'px';};
-
-            el.x = startRX;
-
-            el.y = startRY;
-
-            return el;
-
-        }
-
-        function m2(id)
-
-        {
-
-            var e2=d.getElementById?d.getElementById(id):d.all?d.all[id]:d.layers[id];
-
-            e2.sP=function(x,y){this.style.left=x + 'px';this.style.top=y + 'px';};
-
-            e2.x = startLX;
-
-            e2.y = startLY;
-
-            return e2;
-
-        }
-
-        window.stayTopLeft=function()
-
-        {
-
-            if (document.documentElement && document.documentElement.scrollTop)
-
-                var pY =  document.documentElement.scrollTop;
-
-            else if (document.body)
-
-                var pY =  document.body.scrollTop;
-
-            if (document.body.scrollTop > 30){startLY = 3;startRY = 3;} else  {startLY = TopAdjust;startRY = TopAdjust;};
-
-            ftlObj.y += (pY+startRY-ftlObj.y)/16;
-
-            ftlObj.sP(ftlObj.x, ftlObj.y);
-
-            ftlObj2.y += (pY+startLY-ftlObj2.y)/16;
-
-            ftlObj2.sP(ftlObj2.x, ftlObj2.y);
-
-            setTimeout("stayTopLeft()", 1);
-
-        }
-
-        ftlObj = ml("divAdRight");
-
-        //stayTopLeft();
-
-        ftlObj2 = m2("divAdLeft");
-
-        stayTopLeft();
-
-    }
-
-    function ShowAdDiv()
-
-    {
-
-        var objAdDivRight = document.getElementById("divAdRight");
-
-        var objAdDivLeft = document.getElementById("divAdLeft");
-
-        if (document.body.clientWidth < 1000)
-
-        {
-
-            objAdDivRight.style.display = "none";
-
-            objAdDivLeft.style.display = "none";
-
-        }
-
-        else
-
-        {
-
-            objAdDivRight.style.display = "block";
-
-            objAdDivLeft.style.display = "block";
-
-            FloatTopDiv();
-
-        }
-
-    }
-
-</script>
-
-<script>
-
-    document.write("<script type='text/javascript' language='javascript'>MainContentW = 1000;LeftBannerW = 125;RightBannerW = 125;LeftAdjust = 5;RightAdjust = 5;TopAdjust = 10;ShowAdDiv();window.onresize=ShowAdDiv;;<\/script>");
-
-</script>
-
-</body></html>
+    <div class="main-content">
+        <div class="image-editor">
+            <div class="column">
+                <div class="cropit-image-preview cropit-image-loaded" id="crop-image">
+                </div>
+                <canvas id="leCanvas" width="360" height="360"></canvas>
+            </div>
+
+            <div class="column">
+                <div class="form-group">
+                    <h3>Thay đổi kích thước</h3>
+                    <input type="range" class="cropit-image-zoom-input" min="0" max="1" step="0.01" title="">
+                </div>
+
+                <div class="form-group">
+                    <h3>Xoay hình</h3>
+                    <div>
+                        <button id="rotate_left" type="button" title="Xoay trái"> <i class="fa fa-rotate-left"></i> </button>
+                        <button id="rotate_right" type="button" title="Xoay phải"> <i class="fa fa-rotate-right"></i> </button>
+                    </div>
+                </div>
+                <div  class="form-group">
+                    <h3>Chọn mẫu</h3>
+                    <select id="stateCombo" onchange="stateComboChange();" title="">
+                        <option value="mau1">Mẫu 1</option>
+                        <option value="mau2">Mẫu 2</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <input type="file" class="cropit-image-input" accept="image/*">
+                    <div class="btn button2" id="btn-choose-image">Chọn Ảnh</div>
+                    <div class="btn button3" id="btn-download" onclick="downloadCV()">Tải Xuống</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/jquery.v2.0.0.min.js"></script>
+    <script src="js/jquery.cropit.js"></script>
+    <script src="js/script.js"></script>
+    <script id="_waunuk">var _wau = _wau || [];
+    _wau.push(["tab", "7hhgzxsh993s", "nuk", "right-middle"]);
+    (function() {var s=document.createElement("script"); s.async=true;
+        s.src="//widgets.amung.us/tab.js";
+        document.getElementsByTagName("head")[0].appendChild(s);
+    })();</script>
+</body>
+</html>
