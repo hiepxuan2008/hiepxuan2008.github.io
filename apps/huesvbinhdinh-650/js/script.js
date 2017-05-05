@@ -14,7 +14,7 @@ $(function() {
     $('.image-editor').cropit({
         freeMove: true,
         smallImage: "allow",
-        maxZoom: 1.5
+        maxZoom: 3
     });
     $('#btn-choose-image').click(function() {
         $('.cropit-image-input').click();
