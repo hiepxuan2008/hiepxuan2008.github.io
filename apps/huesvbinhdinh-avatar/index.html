@@ -12,6 +12,14 @@
     <link rel="stylesheet" type="text/css" href="css/style.css" >
 </head>
 <body>
+	<div id="fb-root"></div>
+	<script>(function(d, s, id) {
+	  var js, fjs = d.getElementsByTagName(s)[0];
+	  if (d.getElementById(id)) return;
+	  js = d.createElement(s); js.id = id;
+	  js.src = "//connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v2.9&appId=478115525628074";
+	  fjs.parentNode.insertBefore(js, fjs);
+	}(document, 'script', 'facebook-jssdk'));</script>
     <div>
         <h2>Tạo Avatar kỉ niệm các sinh viên Bình Định học tập tại Huế</h2>
     </div>
@@ -51,6 +59,8 @@
                 </div>
             </div>
         </div>
+		
+		<div class="fb-comments" data-href="https://hiepxuan2008.github.io/apps/huesvbinhdinh-avatar/" data-numposts="10" order_by="reverse_time"></div>
     </div>
     <script src="js/jquery.v2.0.0.min.js"></script>
     <script src="js/jquery.cropit.js"></script>
