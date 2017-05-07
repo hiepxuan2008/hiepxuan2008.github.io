@@ -66,7 +66,7 @@ function uploadToServer(blob) {
     formData.append('picture', blob);
 
     $.ajax({
-        url: "https://139.59.115.135/upload",
+        url: "http://139.59.115.135:3001/upload",
         type: "POST",
         data: formData,
         processData: false,
@@ -101,13 +101,13 @@ $(document).ready(function() {
 
 function refreshRecentlyImages() {
     $.ajax({
-        url: "https://139.59.115.135/images",
+        url: "http://139.59.115.135:3001/images",
         type: "GET"
     }).done(function(data){
         console.log(data);
         var html = '';
         data.forEach(function(item, index) {
-            html += '<div class="image"><img src="https://139.59.115.135' + item.thumb + '"></div>';
+            html += '<div class="image"><img src="http://139.59.115.135:3001' + item.thumb + '"></div>';
         });
         $('.recently-images').html(html);
     });
