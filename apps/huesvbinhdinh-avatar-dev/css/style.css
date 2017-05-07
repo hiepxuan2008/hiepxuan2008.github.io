@@ -1,0 +1,111 @@
+body {
+background-color:black;
+background-image:
+radial-gradient(white, rgba(255,255,255,.2) 2px, transparent 40px),
+radial-gradient(white, rgba(255,255,255,.15) 1px, transparent 30px),
+radial-gradient(white, rgba(255,255,255,.1) 2px, transparent 40px),
+radial-gradient(rgba(255,255,255,.4), rgba(255,255,255,.1) 2px, transparent 30px);
+background-size: 550px 550px, 350px 350px, 250px 250px, 150px 150px; 
+background-position: 0 0, 40px 60px, 130px 270px, 70px 100px;
+	
+    width: 940px;
+    margin: 40px auto;
+	color: white;
+
+    font-size: 14px;
+    font-family: "Roboto","segoe ui",Helvetica,Arial,sans-serif;
+}
+
+.main-content{
+    font-weight: bold;
+    font-size: 16px;
+    position: relative;
+}
+
+.cropit-image-preview {
+	background-color: #f8f8f8;
+	background-size: cover;
+	width: 650px;
+	height: 650px;
+	cursor: move;
+}
+
+#leCanvas{
+    position: absolute;
+    top:0;
+	pointer-events: none;
+}
+
+.column{
+	float: left;
+}
+
+.column:nth-child(2){
+	margin-top: 40px;
+    margin-left: 20px;
+}
+
+.cropit-image-input{
+	visibility: hidden;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 1px;
+	height: 1px;
+}
+
+.btn {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    font-weight: normal;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.button1 {background-color: #4CAF50;} /* Green */
+.button2 {background-color: #008CBA;} /* Blue */
+.button3 {background-color: #f44336;} /* Red */
+.button4 {background-color: #e7e7e7; color: black;} /* Gray */
+.button5 {background-color: #555555;} /* Black */
+
+#rotate_left, #rotate_right{
+	padding: 7px 10px;
+	font-size: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+h3 {
+    margin: 0 0 10px;
+}
+
+#stateCombo {
+    padding: 5px 10px;
+}
+
+.recently-images {
+    margin: 15px 0;
+}
+
+.recently-images .image {
+    margin-right: 6px;
+    margin-bottom: 6px;
+    float: left;
+}
+
+.recently-images .image img {
+    width: 100px;
+    height: 100px;
+
+}
+
+.clearfix {
+    clear: both;
+}
